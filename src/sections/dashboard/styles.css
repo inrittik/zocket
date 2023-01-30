@@ -1,0 +1,50 @@
+.dashboard-main {
+  width: 90%;
+  border-radius: 10px;
+  background-color: white;
+  margin: 1rem auto;
+  border: 1px solid #dae6ff;
+  color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.dashboard-main .dashboard-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.dashboard-main .dashboard-head .filters {
+  display: flex;
+  align-items: center;
+}
+.dashboard-main .dashboard-head .filters div {
+  display: flex;
+  align-items: center;
+}
+.dashboard-main .dashboard-body .headings {
+  display: flex;
+  padding: 1rem;
+  background: #f8f8f8;
+  border: 1.5px solid #eaeaea;
+  border-radius: 10px;
+  align-items: center;
+}
+.dashboard-main .dashboard-body .headings input,
+div {
+  margin: 0 0.4rem;
+}
+.dashboard-main .dashboard-body .headings div:nth-of-type(1) {
+  width: 4rem;
+}
+.dashboard-main .dashboard-body .headings div:nth-of-type(2) {
+  width: 20rem;
+}
+.dashboard-main .dashboard-body .headings div:nth-of-type(3) {
+  width: 12rem;
+}
+.dashboard-main .dashboard-body .headings div:nth-of-type(4),div:nth-of-type(7),div:nth-of-type(9){
+  width: 6rem;
+}
+.dashboard-main .dashboard-body .headings div:nth-of-type(5),div:nth-of-type(6),div:nth-of-type(8) {
+  width: 8rem;
+}

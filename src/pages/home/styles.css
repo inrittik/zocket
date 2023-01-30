@@ -1,0 +1,133 @@
+.home-cnt {
+  padding: 3rem 0;
+  overflow: hidden;
+}
+.home-cnt .head {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-cnt .head .title .title-main {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+.home-cnt .head .title .title-sub {
+  color: rgba(0, 0, 0, 0.5);
+}
+.home-cnt .head .create-btn {
+  padding: 0.6rem 1.2rem;
+  color: white;
+  background-color: #0f6eff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.home-cnt .head .create-btn-inactive {
+  display: none;
+}
+.home-cnt .head .create-btn img {
+  margin-right: 0.4rem;
+}
+.home-cnt .progress {
+  width: 90%;
+  height: 5rem;
+  margin: 2rem auto;
+  margin-top: 3rem;
+  position: relative;
+}
+.home-cnt .progress .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #e7eaf0;
+  position: absolute;
+}
+.home-cnt .progress .bar-active {
+  width: 100%;
+  height: 3px;
+  background-color: #FFB963;
+  position: absolute;
+}
+.home-cnt .progress .stage-list {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: -2rem;
+}
+.home-cnt .progress .stage-name {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 2rem;
+  color:rgba(0, 0, 0, 0.5);
+}
+.home-cnt .progress .stage-list .stage-itm {
+  border-radius: 50%;
+  background: #e4eaf2;
+  border: 4px solid #f6f9ff;
+  padding: 0.8rem;
+  margin: 0;
+}
+.home-cnt .progress .stage-list .stage-itm img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.home-cnt .progress .stage-list .stage-itm-active {
+  background: #f29a2e;
+  border-radius: 50%;
+  border: 4px solid #f6f9ff;
+  padding: 0.7rem 0.8rem;
+  margin: 0;
+  color: white;
+}
+.home-cnt .progress .stage-list .stage-itm-active img {
+  color: white;
+}
+.tail {
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+  position: absolute;
+  top: 80vh;
+}
+.continue {
+  padding: 0.8rem 3rem;
+  color: white;
+  background-color: #0f6eff;
+  border: 0px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+}
+.stage-main{
+  width: 90%;
+  margin: auto;
+  height: 50vh;
+  background-color: white;
+  border: 1px solid #dae6ff;
+  border-radius: 10px;
+  position: relative;
+  top: -2rem;
+}
+.stage-main .stage-head{
+  padding: 1rem;
+  border-bottom: 1.5px solid #EAEAEA;
+  color:rgba(0, 0, 0, 0.5);
+}
+.stage-main .stage-head .stage-title{
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 700;
+}

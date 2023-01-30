@@ -1,0 +1,84 @@
+.cpg-itm {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  font-size: 0.8rem;
+  color: black;
+}
+.cpg-itm input,
+div {
+  margin: 0 0.4rem;
+}
+.cpg-itm div:nth-of-type(1) {
+  width: 4rem;
+}
+.cpg-itm div:nth-of-type(2) {
+  width: 20rem;
+}
+.cpg-itm div:nth-of-type(3) {
+  width: 12rem;
+}
+.cpg-itm div:nth-of-type(4),
+div:nth-of-type(7),
+div:nth-of-type(9) {
+  width: 6rem;
+}
+.cpg-itm div:nth-of-type(5),
+div:nth-of-type(6),
+div:nth-of-type(8) {
+  width: 8rem;
+}
+.cpg-itm .cpg-dp {
+  display: flex;
+  align-items: center;
+}
+.cpg-itm .cpg-dp img {
+  height: 3rem;
+}
+.cpg-itm .cpg-dp div {
+  width: 90%;
+}
+.cpg-itm .cpg-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: black;
+}
+.cpg-itm .cpg-date {
+  font-size: 0.7rem;
+}
+.status1 {
+  color: #317c2e;
+  background: #e1ffe0;
+  border-radius: 24px;
+  text-align: center;
+  width: 100%;
+  padding: 0.4rem 0;
+  font-weight: 600;
+}
+.status2 {
+  color: #d1a307;
+  background: #fff8e0;
+  border-radius: 24px;
+  text-align: center;
+  width: 100%;
+  padding: 0.4rem 0;
+  font-weight: 600;
+}
+.status3 {
+  color: #fc3f3f;
+  background: #ffdede;
+  text-align: center;
+  border-radius: 24px;
+  width: 100%;
+  padding: 0.4rem 0;
+  font-weight: 600;
+}
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.platform img{
+  margin-left: 1rem;
+}

@@ -1,0 +1,19 @@
+.select{
+    display: flex;
+    min-width: 8rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0.5rem;
+}
+.select .label {
+    margin: 0 0.5rem;
+}
+.select .no-label{
+    display: none;
+}
+.select .options {
+    padding: 0.5rem;
+    border: 1.5px solid #E9E9E9;
+    border-radius: 5px;
+    color: black;
+}

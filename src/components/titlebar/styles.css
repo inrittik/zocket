@@ -1,0 +1,36 @@
+.titlebar {
+  width: 100%;
+  margin: 0;
+  height: 4rem;
+  box-shadow: 0px 1px 1px 2px #DAE6FF;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: rgba(0, 0, 0, 0.6);
+  background: white;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+.titlebar .plan {
+  color: #ff8c00;
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  background: rgba(242, 154, 46, 0.1);
+  border-radius: 5px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.titlebar .plan img{
+    margin-right: 0.4rem;
+}
+.titlebar img{
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+.titlebar .profile{
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
