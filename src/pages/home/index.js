@@ -1,14 +1,12 @@
 import React from "react";
 import Dashboard from "../../sections/dashboard";
 import add from "../../assets/add.svg";
-import lamp from "../../assets/lamp.svg";
-import bag from "../../assets/bag.svg";
-import appointments from "../../assets/appointments.svg";
-import tick from "../../assets/tick-circle.svg";
 import Stage1 from "../../sections/Stage1";
 import Stage2 from "../../sections/Stage2";
 import Stage3 from "../../sections/Stage3";
 import Stage4 from "../../sections/Stage4";
+import Modal from "../../components/modal";
+import { icons } from "../../utils/icons";
 import "./styles.css";
 
 const title = [
@@ -22,11 +20,20 @@ const title = [
   },
 ];
 
+const stages = [
+  "What you want to do?",
+  "Choose the Product",
+  "Campaign Settings",
+  "Ready to go",
+];
+
 const Index = () => {
   const [stage, setStage] = React.useState(0);
-
+  const [open, setOpen] = React.useState(false);
   const handleContinue = () => {
     if (stage < 4) setStage(stage + 1);
+
+    if (stage === 4) setOpen(true);
   };
   return (
     <div className="home-cnt">
@@ -60,16 +67,16 @@ const Index = () => {
           {/* stages icons */}
           <div className="stage-list">
             <div className={`${stage > 0 ? "stage-itm-active" : "stage-itm"}`}>
-              <img src={lamp} alt="" />
+              {icons.timelineIcons.lamp}
             </div>
             <div className={`${stage > 1 ? "stage-itm-active" : "stage-itm"}`}>
-              <img src={bag} alt="" />
+              {icons.timelineIcons.bag}
             </div>
             <div className={`${stage > 2 ? "stage-itm-active" : "stage-itm"}`}>
-              <img src={appointments} alt="" />
+              {icons.timelineIcons.appointments}
             </div>
             <div className={`${stage > 3 ? "stage-itm-active" : "stage-itm"}`}>
-              <img src={tick} alt="" />
+              {icons.timelineIcons.tick}
             </div>
           </div>
 
@@ -93,9 +100,11 @@ const Index = () => {
 
       {/* stages of campaigning */}
       {stage > 0 && (
-        <div className="stage-main">
+        <div className={`stage-main ${stage === 3 ? "stage-main-sm" : ""}`}>
           <div className="stage-head">
-            <span className="stage-title" style={{marginRight: '1rem'}}>What you want to do?</span>
+            <span className="stage-title" style={{ marginRight: "1rem" }}>
+              {stages[stage - 1]}
+            </span>
             <span className="stage-sub">(Step {stage} of 4)</span>
           </div>
           {stage === 1 && <Stage1 />}
@@ -107,13 +116,16 @@ const Index = () => {
 
       {/* continue/start-campaign btn */}
       {stage > 0 && (
-        <div className="tail">
+        <div className={`tail ${stage === 3 ? "tail-up" : ""}`}>
           <button className="continue" onClick={handleContinue}>
             {stage < 4 && `Continue`}
             {stage >= 4 && `Start Campaign`}
           </button>
         </div>
       )}
+
+      {/* modal */}
+      {open && <Modal open={open} setOpen={setOpen} />}
     </div>
   );
 };

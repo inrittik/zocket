@@ -42,9 +42,9 @@ div {
 .dashboard-main .dashboard-body .headings div:nth-of-type(3) {
   width: 12rem;
 }
-.dashboard-main .dashboard-body .headings div:nth-of-type(4),div:nth-of-type(7),div:nth-of-type(9){
+.dashboard-main .dashboard-body .headings div:nth-of-type(4),.dashboard-main .dashboard-body .headings div:nth-of-type(7),.dashboard-main .dashboard-body .headings div:nth-of-type(9){
   width: 6rem;
 }
-.dashboard-main .dashboard-body .headings div:nth-of-type(5),div:nth-of-type(6),div:nth-of-type(8) {
+.dashboard-main .dashboard-body .headings div:nth-of-type(5),.dashboard-main .dashboard-body .headings div:nth-of-type(6),.dashboard-main .dashboard-body .headings div:nth-of-type(8) {
   width: 8rem;
 }

@@ -1,21 +1,28 @@
-import { Switch } from '@mui/material';
-import React from 'react'
-import campaign from '../../assets/campaign-dp.png'
-import edit from '../../assets/edit.svg'
-import trash from '../../assets/trash.svg'
-import './styles.css'
+import { Switch } from "@mui/material";
+import React from "react";
+import campaign from "../../assets/campaign-dp.png";
+import edit from "../../assets/edit.svg";
+import trash from "../../assets/trash.svg";
+import "./styles.css";
 
 const Campaign = (props) => {
   const [checked, setChecked] = React.useState(props.on);
   let status = 1;
-  if (props.status === 'Paused') {
+  if (props.status === "Paused") {
     status = 2;
-  }
-  else if (props.status === 'Exhausted') {
+  } else if (props.status === "Exhausted") {
     status = 3;
   }
   const handleChange = (event) => {
     setChecked(event.target.checked);
+  };
+
+  const handleDelete = () => {
+    const filteredArray = props.campaigns.filter((campaign) => {
+      return campaign.id !== props.id;
+    });
+    // console.log(filteredArray)
+    props.setCampaigns(filteredArray);
   };
   return (
     <div className="cpg-itm">
@@ -39,16 +46,16 @@ const Campaign = (props) => {
       <div>{props.clicks}</div>
       <div>{props.budget}</div>
       <div>{props.location}</div>
-      <div className='platform'>
+      <div className="platform">
         <img src={props.platform} alt="" />
       </div>
       <div className={`status${status}`}>{props.status}</div>
-      <div className='actions'>
+      <div className="actions">
         <img src={edit} alt="" />
-        <img src={trash} alt="" />
+        <img src={trash} alt="" onClick={handleDelete} />
       </div>
     </div>
   );
-}
+};
 
-export default Campaign
+export default Campaign;

@@ -1,0 +1,6 @@
+.stage4-cnt{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    flex-wrap: wrap;
+    gap: 2;
+}

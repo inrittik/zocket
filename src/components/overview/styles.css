@@ -1,0 +1,90 @@
+.overview-card {
+  height: 18rem;
+  margin: 1rem;
+  border: 1.5px solid #f5f5f5;
+  border-radius: 15px;
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.overview-card .tick {
+  position: absolute;
+  top: -0.6rem;
+  left: 92%;
+}
+.overview-card .no-tick {
+  display: none;
+}
+.overview-card-active {
+  border-color: #0f6eff;
+  height: 22rem;
+}
+.overview-card .name div:nth-of-type(1) {
+  color: rgb(115, 9, 165);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.overview-card .name div:nth-of-type(2) {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.7rem;
+}
+.overview-card .body {
+  margin: 1rem 0;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+}
+.overview-card .body .img {
+  margin: 1rem auto;
+  position: relative;
+}
+.overview-card .body .img .bar {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  background: #f5f5f5;
+  top: 6.4rem;
+  left: -0.4rem;
+  align-items: center;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  color: #2b23a5;
+  font-size: 500;
+  font-size: 0.8rem;
+}
+.overview-card .body .img .bar .like {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: #4b4f56;
+  padding: 0.3rem 1rem;
+  border: 1px solid #ced0d4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.overview-card .body .img .bar .like img{
+  margin-right: 0.3rem;
+}
+.overview-card .foot {
+  display: flex;
+  justify-content: space-between;
+}
+.overview-card .no-foot {
+  display: none;
+}
+.overview-card .no-foot .btn {
+  display: none;
+}
+.overview-card .foot .btn {
+  width: 40%;
+  padding: 0.6rem 1rem;
+  background: rgba(15, 110, 255, 0.1);
+  border-radius: 5px;
+  font-size: 0.7rem;
+  color: #0f6eff;
+  text-align: center;
+  font-weight: 600;
+}

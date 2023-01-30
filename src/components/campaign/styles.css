@@ -19,13 +19,13 @@ div {
   width: 12rem;
 }
 .cpg-itm div:nth-of-type(4),
-div:nth-of-type(7),
-div:nth-of-type(9) {
+.cpg-itm div:nth-of-type(7),
+.cpg-itm div:nth-of-type(9) {
   width: 6rem;
 }
 .cpg-itm div:nth-of-type(5),
-div:nth-of-type(6),
-div:nth-of-type(8) {
+.cpg-itm div:nth-of-type(6),
+.cpg-itm div:nth-of-type(8) {
   width: 8rem;
 }
 .cpg-itm .cpg-dp {

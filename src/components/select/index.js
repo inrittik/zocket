@@ -1,15 +1,34 @@
-import React from "react";
-import './styles.css'
+import * as React from "react";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
-const Select = ({label, options}) => {
+export default function BasicSelect({ label }) {
+  const [value, setValue] = React.useState("");
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
   return (
-    <div className="select">
-      <div className={`${label===undefined?"no-label":"label"}`}>{label}</div>
-      <div className="options">
-        <div id="op1">{options}</div>
-      </div>
-    </div>
+    <Box>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">{label}</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={value}
+          label="Age"
+          onChange={handleChange}
+          sx={{ minWidth: "10rem" }}
+        >
+          <MenuItem value={10}>Facebook</MenuItem>
+          <MenuItem value={20}>Youtube</MenuItem>
+          <MenuItem value={30}>Google</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
   );
-};
-
-export default Select;
+}

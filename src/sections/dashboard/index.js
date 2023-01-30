@@ -5,9 +5,11 @@ import fb from '../../assets/fb.svg';
 import yt from '../../assets/yt.svg';
 import go from "../../assets/go.svg";
 import './styles.css'
+import SearchBar from '../../components/searchBar';
 
-const campaigns = [
+const arr = [
   {
+    id: 0,
     on: true,
     name: "Bluberry cake Campaign",
     createdAt: "14 Jul",
@@ -19,6 +21,7 @@ const campaigns = [
     status: "Live Now",
   },
   {
+    id: 1,
     on: false,
     name: "Chocolate cake campaign",
     createdAt: "14 Jul",
@@ -30,6 +33,7 @@ const campaigns = [
     status: "Paused",
   },
   {
+    id: 2,
     on: false,
     name: "Browine cake campaign",
     createdAt: "14 Jul",
@@ -41,6 +45,7 @@ const campaigns = [
     status: "Live Now",
   },
   {
+    id: 3,
     on: false,
     name: "Pumpkin cake camapign",
     createdAt: "14 Jul",
@@ -52,6 +57,7 @@ const campaigns = [
     status: "Exhausted",
   },
   {
+    id: 4,
     on: true,
     name: "Bluberry cake Campaign",
     createdAt: "14 Jul",
@@ -65,21 +71,18 @@ const campaigns = [
 ];
 
 const Index = () => {
+  const [campaigns, setCampaigns] = React.useState(arr);
+
   return (
     <div className="dashboard-main">
       <div className="dashboard-head">
         <div className="search-bar">
-          <input
-            type="text"
-            name="campaign"
-            id="campaign"
-            palceholder="Search for the campaign"
-          />
+          <SearchBar placeholder="Search for the campaign" />
         </div>
         <div className="filters">
-          <Select label="Platforms:" options="All Platforms" />
+          <Select label="Platforms:" />
           <Select label="Status:" options="All Status" />
-          <Select options="Last 30 days" />
+          <Select label="Last 30 days:"  options="Last 30 days" />
         </div>
       </div>
       <div className="dashboard-body">
@@ -96,11 +99,17 @@ const Index = () => {
           <div>Actions</div>
         </div>
         <div className="cpg-list">
-          {
-            campaigns.map((campaign, idx) => {
-              return <Campaign id={idx} {...campaign} />
-            })
-          }
+          {campaigns.map((campaign, idx) => {
+            return (
+              <Campaign
+                key={idx}
+                {...campaign}
+                campaigns={campaigns}
+                setCampaigns={setCampaigns}
+                id={campaign.id}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

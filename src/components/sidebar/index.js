@@ -17,7 +17,7 @@ const Index = () => {
           <img src={home} alt="" />
           <div className="name">Home</div>
         </div>
-        <div className="menu-itm">
+        <div className="menu-itm-select">
           <img src={campaign} alt="" />
           <div className="name">Campaign</div>
         </div>

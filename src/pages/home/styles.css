@@ -74,8 +74,9 @@
   border-radius: 50%;
   background: #e4eaf2;
   border: 4px solid #f6f9ff;
-  padding: 0.8rem;
+  padding: 0.7rem 0.8rem;
   margin: 0;
+  color:rgba(0, 0, 0, 0.5);
 }
 .home-cnt .progress .stage-list .stage-itm img {
   height: 1.5rem;
@@ -96,8 +97,10 @@
   display: flex;
   width: 90%;
   justify-content: flex-end;
-  position: absolute;
-  top: 80vh;
+}
+.tail-up {
+  position: relative;
+  top: -24vh;
 }
 .continue {
   padding: 0.8rem 3rem;
@@ -114,12 +117,15 @@
 .stage-main{
   width: 90%;
   margin: auto;
-  height: 50vh;
   background-color: white;
   border: 1px solid #dae6ff;
   border-radius: 10px;
   position: relative;
   top: -2rem;
+}
+.stage-main-sm {
+  width: 60%;
+  margin: 5vw;
 }
 .stage-main .stage-head{
   padding: 1rem;
